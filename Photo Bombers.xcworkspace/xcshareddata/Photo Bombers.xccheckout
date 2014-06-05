@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0BDAFC9B-B08C-4250-AEE7-62C926D92D71</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Photo Bombers</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7CBED5A4-F131-4268-B830-32D2C8C1CADF</key>
+		<string>ssh://github.com/antoncode/PhotoBombers.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Photo Bombers.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7CBED5A4-F131-4268-B830-32D2C8C1CADF</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/antoncode/PhotoBombers.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7CBED5A4-F131-4268-B830-32D2C8C1CADF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7CBED5A4-F131-4268-B830-32D2C8C1CADF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PhotoBombers</string>
+		</dict>
+	</array>
+</dict>
+</plist>
