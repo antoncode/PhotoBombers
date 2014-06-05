@@ -123,12 +123,12 @@
 			children = (
 				3A49292218F1CDC8003255D8 /* AppDelegate.h */,
 				3A49292318F1CDC8003255D8 /* AppDelegate.m */,
-				3A49292518F1CDC8003255D8 /* Images.xcassets */,
-				3A49291A18F1CDC8003255D8 /* Supporting Files */,
 				3A49294218F1CE11003255D8 /* PhotosViewController.h */,
 				3A49294318F1CE11003255D8 /* PhotosViewController.m */,
 				3A49294518F1D567003255D8 /* PhotoCell.h */,
 				3A49294618F1D567003255D8 /* PhotoCell.m */,
+				3A49292518F1CDC8003255D8 /* Images.xcassets */,
+				3A49291A18F1CDC8003255D8 /* Supporting Files */,
 			);
 			path = "Photo Bombers";
 			sourceTree = "<group>";
