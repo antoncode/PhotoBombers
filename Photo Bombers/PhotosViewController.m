@@ -44,11 +44,13 @@
     
     if (self.accessToken == nil) {  // Not logged in, run authorization
         // Using SimpleAuth/OAuth 2.0
-        [SimpleAuth authorize:@"instagram" completion:^(NSDictionary *responseObject, NSError *error) {
-            NSString *accessToken = responseObject[@"credentials"][@"token"];   // Getting our access token
+        [SimpleAuth authorize:@"instagram" options:@{@"scope": @[@"likes"]} completion:^(NSDictionary *responseObject, NSError *error) {
+            self.accessToken = responseObject[@"credentials"][@"token"];   // Getting our access token
             
-            [userDefaults setObject:accessToken forKey:@"accessToken"];
+            [userDefaults setObject:self.accessToken forKey:@"accessToken"];
             [userDefaults synchronize]; // Saves user defaults to disk
+            
+            [self refresh];
         }];
     } else {
         NSLog(@"Already logged in!");
