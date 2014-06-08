@@ -9,10 +9,12 @@
 #import "PhotosViewController.h"
 #import "PhotoCell.h"
 #import "DetailViewController.h"
+#import "PresentDetailTransition.h"
+#import "DismissDetailTransition.h"
 
 #import <SimpleAuth/SimpleAuth.h>
 
-@interface PhotosViewController ()
+@interface PhotosViewController () <UIViewControllerTransitioningDelegate>
 
 @property (nonatomic) NSString *accessToken;
 @property (nonatomic) NSArray *photos;
@@ -113,13 +115,25 @@
 {
     NSDictionary *photo = self.photos[indexPath.row];
     DetailViewController *viewController = [DetailViewController new];
+    viewController.modalPresentationStyle = UIModalPresentationCustom;      // Use custom transition
+    viewController.transitioningDelegate = self;
     viewController.photo = photo;
     
     [self presentViewController:viewController animated:YES completion:nil];
     
 }
 
+#pragma mark - UIViewControllerTransitioningDelegate
 
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
+{
+    return [PresentDetailTransition new];
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
+{
+    return [DismissDetailTransition new];
+}
 
 @end
 

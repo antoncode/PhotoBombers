@@ -21,7 +21,7 @@
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor colorWithWhite:1.0 alpha:0.95];
 
     self.imageView = [[UIImageView alloc] init];
     [self.view addSubview:self.imageView];
@@ -40,7 +40,10 @@
     // called whenever view changes size so that it can re-layout everything inside of it
     [super viewDidLayoutSubviews];
     
+    // View controlelr's view's size
     CGSize size = self.view.bounds.size;
+    
+    // Image view's size
     CGSize imageSize = CGSizeMake(size.width, size.width);
     
     // center view in screen dynamically
