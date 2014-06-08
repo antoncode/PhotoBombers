@@ -7,7 +7,7 @@
 //
 
 #import "PhotoCell.h"
-#import <SAMCache/SAMCache.h>
+#import "PhotoController.h"
 
 @implementation PhotoCell
 
@@ -15,8 +15,9 @@
 {
     _photo = photo;
     
-    NSURL *url = [[NSURL alloc] initWithString:_photo[@"images"][@"thumbnail"][@"url"]];
-    [self downloadPhotoWithURL:url];    // Download photos form Instagram
+    [PhotoController imageForPhoto:_photo size:@"thumbnail" completion:^(UIImage *image) {
+        self.imageView.image = image;
+    }];
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -39,30 +40,6 @@
     [super layoutSubviews];
     
     self.imageView.frame = self.contentView.bounds;     // Sets imageView to the full bounds on the contentView.  ie imageView fills the entire cell.
-}
-
-- (void)downloadPhotoWithURL:(NSURL *)url
-{
-    NSString *key = [[NSString alloc] initWithFormat:@"%@-thumbnail", self.photo[@"id"]];
-    UIImage *photo =[[SAMCache sharedCache] imageForKey:key];
-    
-    if (photo) {    // If the photo was already downloaded, don't download it again.
-        self.imageView.image = photo;
-        return;
-    }
-    // If you don't have the photo, run all of this
-    NSURLSession *session = [NSURLSession sharedSession];
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
-    NSURLSessionDownloadTask *task = [session downloadTaskWithRequest:request completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
-        NSData *data = [[NSData alloc] initWithContentsOfURL:location];
-        UIImage *image = [[UIImage alloc] initWithData:data];  // Get image form URL
-        [[SAMCache sharedCache] setImage:image forKey:key]; // Save photo in cache
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            self.imageView.image = image;   // Called on the main queue since it's changing the UI. ie not background work
-        });
-    }];
-    [task resume];
 }
 
 - (void)like
