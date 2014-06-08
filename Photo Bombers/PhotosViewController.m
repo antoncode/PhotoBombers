@@ -8,6 +8,7 @@
 
 #import "PhotosViewController.h"
 #import "PhotoCell.h"
+#import "DetailViewController.h"
 
 #import <SimpleAuth/SimpleAuth.h>
 
@@ -91,6 +92,8 @@
 
 }
 
+#pragma mark - Collection View delegate
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return [self.photos count];
@@ -106,4 +109,35 @@
     return cell;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSDictionary *photo = self.photos[indexPath.row];
+    DetailViewController *viewController = [DetailViewController new];
+    viewController.photo = photo;
+    
+    [self presentViewController:viewController animated:YES completion:nil];
+    
+}
+
+
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -22,6 +22,7 @@
 		3A49294418F1CE11003255D8 /* PhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A49294318F1CE11003255D8 /* PhotosViewController.m */; };
 		3A49294718F1D567003255D8 /* PhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A49294618F1D567003255D8 /* PhotoCell.m */; };
 		3AD66C481943F53700089B2E /* PhotoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD66C471943F53700089B2E /* PhotoController.m */; };
+		3AD66C4B194410FD00089B2E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD66C4A194410FD00089B2E /* DetailViewController.m */; };
 		B479791F2D9F43EEB964FF87 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B1C5107C63741498D40B159 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,8 @@
 		3A49294818F25F3E003255D8 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3AD66C461943F53700089B2E /* PhotoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoController.h; sourceTree = "<group>"; };
 		3AD66C471943F53700089B2E /* PhotoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoController.m; sourceTree = "<group>"; };
+		3AD66C49194410FD00089B2E /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		3AD66C4A194410FD00089B2E /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		3B1C5107C63741498D40B159 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B015F0E117804A4A9C5B6586 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,6 +135,8 @@
 				3A49294618F1D567003255D8 /* PhotoCell.m */,
 				3AD66C461943F53700089B2E /* PhotoController.h */,
 				3AD66C471943F53700089B2E /* PhotoController.m */,
+				3AD66C49194410FD00089B2E /* DetailViewController.h */,
+				3AD66C4A194410FD00089B2E /* DetailViewController.m */,
 				3A49292518F1CDC8003255D8 /* Images.xcassets */,
 				3A49291A18F1CDC8003255D8 /* Supporting Files */,
 			);
@@ -302,6 +307,7 @@
 				3A49294418F1CE11003255D8 /* PhotosViewController.m in Sources */,
 				3A49292018F1CDC8003255D8 /* main.m in Sources */,
 				3AD66C481943F53700089B2E /* PhotoController.m in Sources */,
+				3AD66C4B194410FD00089B2E /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
